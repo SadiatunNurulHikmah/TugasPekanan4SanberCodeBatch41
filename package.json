@@ -1,0 +1,25 @@
+{
+  "name": "tugaspekanan4sanbercodebatch41",
+  "version": "1.0.0",
+  "description": "Tugas API Automation using mocha, chai and supertest",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SadiatunNurulHikmah/TugasPekanan4SanberCodeBatch41.git"
+  },
+  "author": "Diah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SadiatunNurulHikmah/TugasPekanan4SanberCodeBatch41/issues"
+  },
+  "homepage": "https://github.com/SadiatunNurulHikmah/TugasPekanan4SanberCodeBatch41#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "prompt-sync": "^4.2.0",
+    "supertest": "^6.3.3"
+  }
+}
