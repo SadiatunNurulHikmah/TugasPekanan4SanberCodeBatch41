@@ -1,4 +1,4 @@
-// Add a New Unit
+// Add a New Product
 
 const { expect } = require('chai');
 const request = require('supertest');
@@ -14,11 +14,15 @@ const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NjNmZDQzLTk3MWMt
 
 describe('Create a New User in One Company', function(){
     const response = request(baseUrl) //baseUrl
-        .post('/units') //endpoint
+        .post('/products') //endpoint
         .auth(TOKEN, {type:"bearer"} )
         .send({
-            "name": "gram",
-            "description": "weight measurement"
+            "category_id" : "811f547e-a24e-4f94-bfe1-b7ed7d11c03f",
+            "code": "A314ASDDFIER3432",
+            "name": "taro",
+            "price": "3500",
+            "cost": "3000",
+            "stock": "5"
          })
   
 

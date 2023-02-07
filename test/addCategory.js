@@ -1,4 +1,4 @@
-// Add a New Unit
+// Add a New Category
 
 const { expect } = require('chai');
 const request = require('supertest');
@@ -14,11 +14,11 @@ const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NjNmZDQzLTk3MWMt
 
 describe('Create a New User in One Company', function(){
     const response = request(baseUrl) //baseUrl
-        .post('/units') //endpoint
+        .post('/categories') //endpoint
         .auth(TOKEN, {type:"bearer"} )
         .send({
-            "name": "gram",
-            "description": "weight measurement"
+            "name": "makanan ringan",
+            "description": "makanan ringan dari indofood"
          })
   
 
