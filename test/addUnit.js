@@ -17,24 +17,23 @@ describe('Create a New User in One Company', function(){
         .post('/units') //endpoint
         .auth(TOKEN, {type:"bearer"} )
         .send({
-            "name": "gram",
+            "name": "liter",
             "description": "weight measurement"
          })
   
 
-    // Cek Response Status 201 Created
-    it('response status is 201', async () =>{ 
-        console.log((await response).status)
-        console.log((await response).headers)
-        console.log((await response).body)
+    // Response Status 201 Created
+    it('Response Status is 201 Created', async () =>{ 
         expect((await response).status).to.equal(201)
     })
 
-    /*it('message is equal to Pet ID', async () =>{ 
-        //console.log((await response).status)
+    // Cek isi Response Body
+    it('Response Body is OK', async () =>{ 
         //console.log((await response).body)
-        expect((await response).body.petId).to.equal(0)
-    })*/
+        expect((await response).body.status).to.equal("success")
+        expect((await response).body.message).to.equal("Unit berhasil ditambahkan")
+        expect((await response).body.data.name).to.equal("liter")
+    })
 })
 
 
