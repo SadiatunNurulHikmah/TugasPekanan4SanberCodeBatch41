@@ -35,7 +35,7 @@ describe('Get User List', function(){
 
 })
 */
-const categoryId = '232983d4-14fe-4836-ad8c-884681ec12fd';
+const categoryId = '466c4955-d315-4943-be0a-11432b420758';
 
 describe('Add Product', function(){
     const response = request(baseUrl) //baseUrl
@@ -44,14 +44,14 @@ describe('Add Product', function(){
         .send({
             "category_id" : categoryId,
             "code": "NSL123456",
-            "name": "Nescafe Original",
+            "name": "",
             "price": "9200",
             "cost": "8600",
             "stock": "100"
          })
   
 
-    // Cek Response Status 201 Created
+  /*  // Cek Response Status 201 Created
     it('response status is 201 Created', async () =>{ 
         console.log((await response).status)
         expect((await response).status).to.equal(201)
@@ -63,6 +63,19 @@ describe('Add Product', function(){
         expect((await response).body.status).to.equal("success")
         expect((await response).body.message).to.equal("Product berhasil ditambahkan")
         expect((await response).body.data.name).to.equal("Nescafe Original")
+    }) */
+
+    // Response Status 400 Bad Request
+    it('Response Status is 400 Bad Request', async () =>{ 
+        console.log((await response).status)
+        expect((await response).status).to.equal(400)
+    }) 
+
+    // Cek isi Response Body
+    it('Response Body for Status Fail', async () =>{ 
+        console.log((await response).body)
+        expect((await response).body.status).to.equal("fail")
+        //expect((await response).body.message).to.equal(""name" is not allowed to be empty")
     })
 })
 
