@@ -1,4 +1,4 @@
-// Add a New Product
+// Delete Customer By Id
 
 const { expect } = require('chai');
 const request = require('supertest');
@@ -35,14 +35,14 @@ describe('Get User List', function(){
 
 })
 */
-const costumerId = '61263ced-e63d-401f-a6f5-1aec39c84ad4';
+const costumerId = '9c9939bb-30ec-4292-add8-b83f30bbff0d=-=-';
 
-describe('Create a New User in One Company', function(){
+describe('Delete Customer By Id', function(){
     const response = request(baseUrl) //baseUrl
         .delete('/customers/' + costumerId) //endpoint
         .auth(TOKEN, {type:"bearer"} )
   
-
+/*
     // Cek Response Status 200 OK
     it('response status is 200 OK', async () =>{ 
         console.log((await response).status)
@@ -53,6 +53,19 @@ describe('Create a New User in One Company', function(){
     it('Response Body is OK', async () =>{ 
         console.log((await response).body)
         expect((await response).body.status).to.equal("success")
+    }) */
+
+    // Response Status 404 Not Found
+    it('Response Status is 404 Not Found', async () =>{ 
+        console.log((await response).status)
+        expect((await response).status).to.equal(404)
+    }) 
+
+    // Cek isi Response Body
+    it('Response Body for Status Fail', async () =>{ 
+        console.log((await response).body)
+        expect((await response).body.status).to.equal("fail")
+        expect((await response).body.message).to.equal("id tidak valid")
     })
 })
 
