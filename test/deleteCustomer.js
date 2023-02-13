@@ -11,6 +11,7 @@ const baseUrl = 'https://kasir-api.belajarqa.com';
 // password = tokodiah
 const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA0NjNmZDQzLTk3MWMtNDY0Yi04NzllLTdkMzQ3OTllMTkwOCIsImNvbXBhbnlJZCI6ImY2MGUxNTFjLTZhOTMtNGI4My1iNDBhLWM0Yjc1MzA3OTkwZSIsImlhdCI6MTY3NTc2MDEzM30.MLqY9_WxeOJVqVtCSdczua9_3Kvg-WIAs9fl4v2QNe4';
 
+// Get Customer Id
 // get customerId dari sini dan pilih salah satu customerId
 /*
 describe('Get User List', function(){
@@ -35,6 +36,8 @@ describe('Get User List', function(){
 
 })
 */
+
+// Delete Customer By Id
 const costumerId = '9c9939bb-30ec-4292-add8-b83f30bbff0d=-=-';
 
 describe('Delete Customer By Id', function(){
@@ -43,6 +46,7 @@ describe('Delete Customer By Id', function(){
         .auth(TOKEN, {type:"bearer"} )
   
 /*
+    // Positive Case
     // Cek Response Status 200 OK
     it('response status is 200 OK', async () =>{ 
         console.log((await response).status)
@@ -55,6 +59,7 @@ describe('Delete Customer By Id', function(){
         expect((await response).body.status).to.equal("success")
     }) */
 
+    // Negative Case
     // Response Status 404 Not Found
     it('Response Status is 404 Not Found', async () =>{ 
         console.log((await response).status)
