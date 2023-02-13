@@ -11,3 +11,5 @@ Petunjuk Pengerjaan :
 Make your own API Automation using supertest, mocha and chai from this URL
 https://docs.google.com/document/d/1W0XI71VrHLgnhRyziVUQqy62Acnh0FSxGHs9n4GIV_U/edit?usp=sharing  (KASIR AJA API CONTRACT/DOCUMENTATION)
 Minimum contains 4 endpoint (CRUD flow) with assert positive and negative scenario (2 test cases)
+
+ Link Capture Dokumentasi : https://docs.google.com/document/d/1tWFRoPN5ryFO3vdrMPAnNVOE_Dxm63wEdCqfw4MFKTY/edit?usp=share_link
