@@ -32,10 +32,9 @@ describe('Get User List', function(){
         console.log((await response).body.data.categories)
         expect((await response).body.status).to.equal("success")
     })
-
 })
 */
-const categoryId = '232983d4-14fe-4836-ad8c-884681ec12fd';
+const categoryId = 'a47205d8-0e49-4260-83c4-96ccc22654e8';
 
 describe('Update Category', function(){
     const response = request(baseUrl) //baseUrl
@@ -43,11 +42,12 @@ describe('Update Category', function(){
         .auth(TOKEN, {type:"bearer"} )
         .send({
             "name": "Minuman Kaleng",
-            "description": "Minuman dari Nestle"
+            "description": "Minuman Kaleng dari Nestle"
          })
-        
-    // Response Status 200 OK
+
+  /*  // Response Status 200 OK
     it('Response Status is 200 OK', async () =>{ 
+        console.log((await response).status)
         expect((await response).status).to.equal(200)
     })
 
@@ -56,7 +56,18 @@ describe('Update Category', function(){
         console.log((await response).body)
         expect((await response).body.status).to.equal("success")
         expect((await response).body.data.name).to.equal("Minuman Kaleng")
+    }) */
+
+    // Response Status 400 Bad Request
+    it('Response Status is 400 Bad Request', async () =>{ 
+        console.log((await response).status)
+        expect((await response).status).to.equal(400)
+    })
+
+    // Cek isi Response Body
+    it('Response Body for Status Fail', async () =>{ 
+        console.log((await response).body)
+        expect((await response).body.status).to.equal("fail")
+        //expect((await response).body.message).to.equal(""name" is not allowed to be empty")
     })
 })
-
-
